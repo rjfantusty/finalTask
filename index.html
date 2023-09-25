@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration form</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            background-color: rgb(146, 255, 255);
+        }
+        h2,p{
+            text-align: center;
+            margin: 10px;
+        }
+
+        #box {
+            width: 50vw;
+            padding: .9vw;
+            background-color: aliceblue;
+            border-radius: 5px;
+
+        }
+
+        label{
+            font-size: larger;
+            display: block;
+        }
+      
+        input{
+            width: calc(100% - .9vw);
+            margin: auto;
+            padding: 10px;
+        }
+        button{
+            padding: 10px 15px;
+            color:white;
+            background-color: orange;
+            border: none;
+            border-radius: 10px;
+            font-size: larger;
+        }
+        h2{
+            color:orange;
+            
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+
+    </style>
+</head>
+<body>
+
+    <div id="box">
+        <form onsubmit="formhandler(event)" >
+            <h2>Book a call</h2>
+            <p>Book a call slot our representative will call you within 1hr of selected time.</p>
+            <hr>
+            <label for="name">Name : </label>
+            <input id="name" name="Name" type="text"> <br>
+            <label for="email">Email : </label>
+            <input id="email" name="Email" type="email"> <br>
+            <label for="phone">Phone : </label>
+            <input id="phone" name="Phone" type="text"> <br>
+            <label for="call">Time for call : </label>
+            <input id="call" name="Date" type="date">
+            <input id="call" name="Time" type="time">  <br>
+            <button type="submit"> Get a Call</button>
+
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
