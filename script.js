@@ -1,8 +1,5 @@
 
-
-
 function formhandler(e){
-
     e.preventDefault();
     console.log(e.target.Name.value)
     console.log(e.target.Email.value)
@@ -13,8 +10,12 @@ function formhandler(e){
     const formdata= new FormData(e.target)
     const jsondata={}
     formdata.forEach((value,key)=>jsondata[key]=value)
-    console.log(jsondata)
-    alert(JSON.stringify(jsondata))
+    
+    axios.post('https://crudcrud.com/api/81c45959af094ff3abec0b6f54ebc9c0/appointments',jsondata)
+    .then(data=>console.log(data))
+    .catch(err=>console.error(err))
+
+  
 
 }
 
