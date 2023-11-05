@@ -10,7 +10,7 @@
     <div class="container container-sm-fluid p-2 " >
         <div class="row justify-content-center">
             <div class="col-lg-8 col-md-9 col-sm-10 ">
-                <form class="form-control" onsubmit="formhandler(event)" >
+                <form class="form-control " id="getform" onsubmit="formhandler(event)" >
                     <h2 class="text-center" style="color: orange;">Book a call</h2>
                     <p class="text-center">Book a call slot our representative will call you within 1hr of selected time.</p>
                     <hr>
@@ -33,6 +33,29 @@
                     <button type="submit" class="form-control fw-bold text-white p-2" style="background-color: orange;"> Get a Call</button>
         
                 </form>
+                <form class="form-control d-none" id="editform"  onsubmit="edithandler(event)" >
+                    <h2 class="text-center" style="color: orange;">edit appointment</h2>
+                    <p class="text-center d-none" id="clientid"  style="color: orange;"></p>
+                    <hr>
+                    <label for="name" class="form-label">Name : </label>
+                    <input id="editname" name="Name" class="form-control" type="text"> <br>
+                    <label for="email" class="form-label">Email : </label>
+                    <input id="editemail" name="Email" class="form-control" type="email"> <br>
+                    <label for="phone" class="form-label">Phone : </label>
+                    <input id="editphone" name="Phone" class="form-control" type="text"> <br>
+                    <label for="call" class="form-label">Time for call : </label>
+                    <div class="row g-2 ">
+                        <div class="col-lg-6 col-sm-12">
+                            <input id="editdate" class="form-control " name="Date" type="date">
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                            <input id="edittime" class="form-control col-5" name="Time" type="time">  <br>
+                        </div>
+                        
+                    </div>
+                    <button type="submit" class="form-control fw-bold text-white p-2" style="background-color: orange;"> save Edit</button>
+        
+                </form>
             </div>
         </div>
         <ol class="list-group list-group-numbered mt-5 " id="appointments">
@@ -42,7 +65,8 @@
                 <div>Phone No</div>
                 <div>Date</div>
                 <div>Time</div>
-                <div>Dele</div>
+                <div>Edit</div>
+                <div>Delete</div>
             </li>
           </ol>
     </div>
