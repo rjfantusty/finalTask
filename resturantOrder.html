@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Orders</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container-fluid p-1 " >
+        <div class="row justify-content-center">
+            <div class="container-fluid ">
+                <h2 class="text-center" style="color: orange;">Place Orders</h2>
+                <form class="form-control d-flex justify-content-around p-2" id="getform" onsubmit="formhandler(event)" >   
+                    <hr>
+                    <div>
+                        <label for="menuItem" class="form-label">Menu Items </label>
+                        <select class="form-select" name="orderItem"  id="menuItem" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="Chicken fry">Chicken Fry</option>
+                            <option value="Pulao">Pulao</option>
+                            <option value="Dal makhni">Dal makhni</option>
+                          </select>
+                    </div>
+                    <div>
+                        <label for="price" class="form-label">Price </label>
+                        <input id="price" name="price" class="form-control " type="number"> 
+                    </div>
+                    <div>
+                        <label for="TableNumber" class="form-label">Table No. </label>
+                        <select class="form-select" name="tableNo"  id="TableNumber" aria-label="Default select example">
+                            <option selected>Open this select table</option>
+                            <option value="1">Table 1</option>
+                            <option value="2">Table 2</option>
+                            <option value="3">Table 3</option>
+                          </select>
+                    </div>
+                   <div class="d-flex">
+                       <button type="submit" class="form-control fw-bold text-white p-2" style="background-color: orange;"> Place order</button>
+                   </div>
+        
+                </form>
+
+            </div>
+        </div>
+        <h2>Orders</h2>
+        <div id="table1">
+            <h4>Table 1</h4>
+            <ol class="list-group list-group-numbered mt-5 " id="1">
+                <li class="list-group-item d-flex justify-content-around" >
+                    <div>Order item</div>
+                    <div>Price</div>
+
+                    <div>Delete</div>
+                </li>
+              </ol>
+        </div>
+        <div id="table2">
+            <h4>Table 2</h4>
+            <ol class="list-group list-group-numbered mt-5 " id="2">
+                <li class="list-group-item d-flex justify-content-around" >
+                    <div>Order item</div>
+                    <div>Price</div>
+
+                    <div>Delete</div>
+                </li>
+              </ol>
+        </div>
+        <div id="table3">
+            <h4>Table 3</h4>
+            <ol class="list-group list-group-numbered mt-5 " id="3">
+                <li class="list-group-item d-flex justify-content-around" >
+                    <div>Order item</div>
+                    <div>Price</div>
+
+                    <div>Delete</div>
+                </li>
+              </ol>
+        </div>
+
+    </div>
+    
+    <script src="resturantScript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
